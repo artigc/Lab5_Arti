@@ -1,0 +1,57 @@
+﻿
+@model IEnumerable<Lab5_Arti.Models.Student>
+
+@{
+    ViewData["Title"] = "studentBookRecord";
+}
+
+
+<h1><img src="~/images/logo.png" height="70" width="70" />Books </h1>
+<h1>Index</h1>
+<p>
+    <a asp-action="Create">Create studentBookRecord</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.studentID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bookId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.issuedDate)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.studentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bookId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.issuedDate)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
