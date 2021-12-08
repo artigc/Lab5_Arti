@@ -86,8 +86,8 @@ namespace Lab5_Arti.Controllers
                 return View(car);
             }
 
-            // POST: Cars/Edit/5
-            [HttpPost]
+        // POST: Books/Edit/5
+        [HttpPost]
             [ValidateAntiForgeryToken]
             public async Task<IActionResult> Edit(int id, [Bind("bookId, bookName, authorName, totalBooks, publishDate")] Books book)
             {
